@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Workshops application
 
 Hi! We think it’s great that you want to **join along with Netguru** to start learning **Ruby on Rails**. Taking part in workshops is also a **great opportunity to start an internship** with us and become one of the Netguru folks. Since you have just taken your first step on your adventure with programming in RoR, we challenge you to complete the following task. **Ready, steady…Go!**
@@ -79,3 +80,6 @@ Setup the database for your application (development and test environments):
 ## Good Luck! 
 
 *We want all attendees at netguru workshops to have an awesome harassment-free experience. Read our full [code of conduct](https://github.com/netguru-training/workshops/blob/master/code_of_conduct.md) for more details.*
+=======
+# tarnawski
+>>>>>>> 48322956b986dae797a5e73bb22d2e5f414a4f12

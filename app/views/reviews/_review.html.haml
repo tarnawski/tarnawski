@@ -1,4 +1,14 @@
-%p= review.content
-%p
-  %b= review.rating
-  %em= review.author
+%br
+%div.panel.panel-default
+  .panel-body
+    %p= review.content
+  .panel-footer
+    Rating: 
+    %b= review.rating
+    .text-right
+      Author:
+      %em= review.author 
+
+
+
+

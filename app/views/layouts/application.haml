@@ -14,8 +14,18 @@
         .navbar-header
           %span.navbar-brand #{AppConfig.workshops_name}
         %p.navbar-text.navbar-right
-          Links should go here
+          = link_to('Category list', root_path, class: 'btn btn-success')
+          -if user_signed_in?
+            = link_to('User profile', users_index_path, class: 'btn btn-primary')
+            = link_to('Logout', destroy_user_session_path,  :method=>'delete', class: 'btn btn-primary')
+          -else
+            = link_to('Login', new_user_session_path, class: 'btn btn-primary')
+            = link_to('Sign up ', new_user_registration_path, class: 'btn btn-primary')
     .container-fluid
       .row
-        .col-lg-12
+        .col-lg-6
+          .jumbotron
+            %H1 Neguru Szczecin Workshops 2015     
+            %H3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas egestas molestie nibh vitae posuere. Donec magna dolor, viverra non commodo et, facilisis a nulla. Praesent aliquet, massa eget hendrerit sodales, velit justo suscipit nibh, porttitor pellentesque nisl elit ut sem. Morbi eu elementum sapien. Phasellus at commodo nibh, ut vestibulum nibh. Curabitur commodo, nibh at vulputate tristique, dolor arcu efficitur odio, in dapibus orci elit sed lacus. Donec et nisl tristique.
+        .col-lg-6   
           = yield

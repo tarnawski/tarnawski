@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit, :update, :destroy, :create]
-  
+
   expose(:categories)
   expose(:category)
   expose(:product) { Product.new }
@@ -12,12 +12,26 @@ class CategoriesController < ApplicationController
   end
 
   def new
+if current_user.admin?	
+
+else
+redirect_to new_user_session_url
+
+end
+
   end
 
   def edit
+if current_user.admin?	
+
+else
+redirect_to new_user_session_url
+
+end
   end
 
   def create
+if current_user.admin?	
     self.category = Category.new(category_params)
 
     if category.save
@@ -25,14 +39,24 @@ class CategoriesController < ApplicationController
     else
       render action: 'new'
     end
+else
+redirect_to new_user_session_url
+
+end
   end
 
   def update
+if current_user.admin?	
     if category.update(category_params)
       redirect_to category, notice: 'Category was successfully updated.'
     else
       render action: 'edit'
     end
+else
+redirect_to new_user_session_url
+
+end
+
   end
 
   def destroy
