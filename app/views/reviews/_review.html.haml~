@@ -1,0 +1,13 @@
+%br
+%div.panel.panel-default
+  .panel-body
+    %p= review.content
+  .panel-footer
+    Rating: 
+    %b= review.rating
+    Author:
+    %em= review.author 
+
+
+
+

@@ -1,0 +1,19 @@
+%h1 Profil użytkownika:
+%h2= "#{ @user.firstname } #{ @user.lastname }"
+%h3= @user.email
+%br
+%h3 Ostatnie wpisy użytkownika:
+
+%table.table
+  %tr
+    %th Treść
+    %th Ocena
+    %th Data
+
+  - @nowa.each do |nowa|
+    %tr
+      %td= nowa.content
+      %td= nowa.rating
+      %td= nowa.created_at.strftime("%m-%d-%Y")
+
+      

@@ -1,0 +1,26 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = category.name
+
+%table.table
+
+
+  - category.products.each do |product|
+    %tr
+      %td= product.title
+      %td= link_to 'Show', category_product_path(product.category_id, product), class: 'btn btn-sm btn-success'
+      -if current_user.try(:admin?)      
+        %td= link_to 'Edit', edit_category_product_path(product.category_id, product), class: 'btn btn-sm btn-warning'
+      -if current_user.try(:admin?)
+        %td= link_to 'Destroy', category_product_path(product.category_id, product), class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: 'Are you sure?' }
+     
+%br
+  %h3 New product
+  = render 'products/form'
+
+= link_to 'Edit', edit_category_path(category), class: 'btn btn-success'
+
+= link_to 'Back', categories_path, class: 'btn btn-primary'
+

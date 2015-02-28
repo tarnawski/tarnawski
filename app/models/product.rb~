@@ -1,0 +1,26 @@
+class Product < ActiveRecord::Base
+  belongs_to :category
+  belongs_to :user
+  has_many :reviews
+
+validates_presence_of :description
+validates_presence_of :price
+validates_presence_of :title
+ 
+
+def average_rating
+  reviews = self.reviews
+  review_sum = reviews.inject(0) { |sum, review| sum += review.rating }
+  avg_rating = review_sum.fdiv(reviews.count)
+end
+
+ def price
+raw_value=self.price
+    separator = I18n.t('number.currency.format.separator')
+
+    super(raw_value.sub(separator, '.'))
+  end
+end
+
+
+end
