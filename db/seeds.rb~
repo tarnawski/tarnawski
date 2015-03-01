@@ -259,7 +259,7 @@ user.save!
         rating: '5',
 	created_at: '2015-02-26 20:29:27.899831',
 	updated_at: '2015-02-26 20:29:27.899831',
-        product_id: '5',
+        product_id: '4',
         user_id: '2'
 )
   Review.create(
@@ -267,7 +267,7 @@ user.save!
         rating: '3',
 	created_at: '2015-02-26 20:29:27.899831',
 	updated_at: '2015-02-26 20:29:27.899831',
-        product_id: '5',
+        product_id: '4',
         user_id: '4'
 )
   Review.create(
@@ -275,7 +275,7 @@ user.save!
         rating: '5',
 	created_at: '2015-02-26 20:29:27.899831',
 	updated_at: '2015-02-26 20:29:27.899831',
-        product_id: '6',
+        product_id: '4',
         user_id: '5'
 )
   Review.create(
@@ -283,7 +283,7 @@ user.save!
         rating: '4',
 	created_at: '2015-02-26 20:29:27.899831',
 	updated_at: '2015-02-26 20:29:27.899831',
-        product_id: '6',
+        product_id: '4',
         user_id: '1'
 )
 
