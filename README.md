@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 ### Let’s start with a setup:
 **Database**
 
